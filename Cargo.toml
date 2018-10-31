@@ -1,0 +1,10 @@
+[package]
+name = "siren-agent"
+version = "0.1.0"
+authors = ["Alessio Biancalana <dottorblaster@gmail.com>"]
+
+[dependencies]
+actix-web = "0.7"
+serde = "1.0.80"
+serde_derive = "1.0.80"
+
