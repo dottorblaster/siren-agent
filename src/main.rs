@@ -28,7 +28,7 @@ fn index(_req: &HttpRequest) -> impl Responder {
 
 fn main() {
     server::new(|| App::new().resource("/", |r| r.f(index)))
-        .bind("127.0.0.1:9999")
+        .bind("0.0.0.0:9999")
         .unwrap()
         .run();
 }
