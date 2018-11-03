@@ -1,8 +1,19 @@
 language: rust
 rust:
-  - stable
-  - beta
-  - nightly
+- stable
+- beta
+- nightly
 matrix:
   allow_failures:
-    - rust: nightly
+  - rust: nightly
+dist: trusty
+sudo: required
+deploy:
+  provider: releases
+  api_key:
+    secure: iaxbXBkcAsS7vbC/A2peMrcvUcCnuC7RSNNV0IXB5f/0ejSR21kNIVJkFQmSCA9/nLYvvmILsDKhGQOqmcAoiOJ+zXtQ46+D0eCWeFuB9e4TuLwtyds3Idr7zPC/web30AlsKzyGN0Xy/yPkAWA4buDgyMdqFV/dVBC4Ou4CZ6puO5zi9br4QHJVx7oAK8YtUhFg2yE3l4svVowh+1qyEHpMa9E82fgZztp2Z2aOXpDGYdlUYB96brhxhtmz2uGMkA8KmzIwIT9fqt9DGcXm3TkUqFybDZ8XVT5jNWF0mUMDk9HI6ggEFzqlN+NoQQG62acKqya0BZLSPdfs1yocc2zI2kVpCQkCZLAyO27NEO7OGBjgmH24sjrg8OmywHsO2IEk8d0YA12fVXtwP0+pM2gZf0LB17/CEhTHj3+WuLSH9kwiWXA0nXfdoBEmu7STO7vK23nF3OsCBBQTzQJEcmvHVtORurEkCqF/denpRkEZPG3p66PbgWFP1Nofc09S4Wh9fyTv6rEGyCgfB3HHztyVLenT9/+yePHOz/biWTpJW65nLMcXYIvV0mzsgI4ylnAPKDGKdFcWQo84Exbup6B3M8pPiDWGjxxR1/mY4sJarRWovYZB7l3dz46zQIpapM6TWYyI4TGc+NLsNXEPS2t/tWw6yrOhKkEQUiJ6hws=
+  file: target/release/siren-agent
+  skip_cleanup: true
+  on:
+    repo: dottorblaster/siren-agent
+    tags: true
