@@ -1,13 +1,12 @@
 language: rust
 rust:
 - stable
-- beta
-- nightly
-matrix:
-  allow_failures:
-  - rust: nightly
 dist: trusty
 sudo: required
+script:
+  - cargo build --verbose --all
+  - cargo test --verbose --all
+  - cargo build --release
 deploy:
   provider: releases
   api_key:
