@@ -1210,7 +1210,7 @@ dependencies = [
 
 [[package]]
 name = "siren-agent"
-version = "1.1.0"
+version = "1.1.1"
 dependencies = [
  "actix-web 1.0.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.99 (registry+https://github.com/rust-lang/crates.io-index)",
