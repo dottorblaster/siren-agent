@@ -5,6 +5,6 @@ authors = ["Alessio Biancalana <dottorblaster@gmail.com>"]
 
 [dependencies]
 actix-web = "~1.0.9"
-serde = "~1.0.102"
+serde = "~1.0.103"
 serde_derive = "~1.0.103"
 
