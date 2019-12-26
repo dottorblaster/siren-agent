@@ -3,7 +3,7 @@ extern crate serde_derive;
 extern crate actix_web;
 
 use std::env;
-use actix_web::{HttpServer, App, HttpRequest, Responder, web};
+use actix_web::{HttpServer, HttpRequest, App, Responder, middleware, web};
 
 #[derive(Serialize)]
 struct Response {
@@ -18,19 +18,25 @@ fn get_from_env(name: &str) -> String {
     }
 }
 
-fn index(_req: HttpRequest) -> impl Responder {
+async fn index(_req: HttpRequest) -> impl Responder {
     let host_name = get_from_env("HOSTNAME");
     web::Json(Response {
         hostname: host_name,
         status: String::from("OK"),
     })
 }
-fn main() {
-    HttpServer::new(||{
-        App::new().route("/", web::get().to(index))
-    })
-    .bind("0.0.0.0:9999")
-    .expect("Cannot bind to port 9999")
+
+#[actix_rt::main]
+async fn main() -> std::io::Result<()> {
+    std::env::set_var("RUST_LOG", "actix_web=info");
+    env_logger::init();
+    
+    HttpServer::new(||
+        App::new()
+            .wrap(middleware::Logger::default())
+            .service(web::resource("/").to(index))
+    )
+    .bind("0.0.0.0:9999")?
     .run()
-    .unwrap();
+    .await
 }

@@ -2,9 +2,12 @@
 name = "siren-agent"
 version = "1.1.0"
 authors = ["Alessio Biancalana <dottorblaster@gmail.com>"]
+edition = "2018"
 
 [dependencies]
+actix-rt = "1.0.0"
 actix-web = "~2.0.0"
 serde = "~1.0.104"
 serde_derive = "~1.0.103"
+env_logger = "0.6"
 
