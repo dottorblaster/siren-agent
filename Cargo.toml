@@ -7,7 +7,7 @@ edition = "2018"
 [dependencies]
 actix-rt = "1.1.1"
 actix-web = "~2.0.0"
-serde = "~1.0.114"
+serde = "~1.0.115"
 serde_derive = "~1.0.103"
 env_logger = "0.7"
 systemstat = "0.1.5"
