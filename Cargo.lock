@@ -147,13 +147,13 @@ dependencies = [
 
 [[package]]
 name = "actix-rt"
-version = "2.5.0"
+version = "2.5.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "05c2f80ce8d0c990941c7a7a931f69fd0701b76d521f8d36298edf59cd3fbf1f"
+checksum = "82cf33e04d9911b39bfb7be3c01309568b4315895d3358372dce64ed2c2bf32d"
 dependencies = [
  "actix-macros 0.2.3",
  "futures-core",
- "tokio 1.12.0",
+ "tokio 1.15.0",
 ]
 
 [[package]]
@@ -1574,7 +1574,7 @@ dependencies = [
 name = "siren-agent"
 version = "1.2.1"
 dependencies = [
- "actix-rt 2.5.0",
+ "actix-rt 2.5.1",
  "actix-web",
  "env_logger",
  "serde",
@@ -1828,11 +1828,10 @@ dependencies = [
 
 [[package]]
 name = "tokio"
-version = "1.12.0"
+version = "1.15.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c2c2416fdedca8443ae44b4527de1ea633af61d8f7169ffa6e72c5b53d24efcc"
+checksum = "fbbf1c778ec206785635ce8ad57fe52b3009ae9e0c9f574a728f3049d3e55838"
 dependencies = [
- "autocfg 1.0.1",
  "libc",
  "mio 0.7.7",
  "once_cell",
