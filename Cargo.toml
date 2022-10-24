@@ -10,5 +10,5 @@ actix-web = "~4.2.1"
 serde = "~1.0.147"
 serde_derive = "~1.0.147"
 env_logger = "0.9"
-systemstat = "0.2.0"
+systemstat = "0.2.1"
 
