@@ -5,7 +5,7 @@ authors = ["Alessio Biancalana <dottorblaster@gmail.com>"]
 edition = "2018"
 
 [dependencies]
-actix-rt = "2.8.0"
+actix-rt = "2.9.0"
 actix-web = "~4.4.0"
 serde = "~1.0.185"
 serde_derive = "~1.0.184"
