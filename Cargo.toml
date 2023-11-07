@@ -8,7 +8,7 @@ edition = "2018"
 actix-rt = "2.9.0"
 actix-web = "~4.4.0"
 serde = "~1.0.185"
-serde_derive = "~1.0.189"
+serde_derive = "~1.0.192"
 env_logger = "0.10"
 systemstat = "0.2.3"
 
